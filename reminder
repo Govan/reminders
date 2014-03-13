@@ -26,7 +26,7 @@ end
 
 tip = ARGV[0]
 unless tip
-  tip_root = File.join File.dirname(__FILE__), "./support/reminders/**/*.txt"
+  tip_root = File.join File.dirname(__FILE__), "./reminders/**/*.txt"
   all_tips = Dir[tip_root]
   tip = all_tips.shuffle.first
 end
