@@ -27,8 +27,7 @@ launchctl load ~/Library/LaunchAgents/uk.co.leftbrained.reminders.plist
 * Templatize the plist file to insert paths dynamically
 * CLI option to change the time between tips
 * CLI option to change the focus of tips (e.g. only show "Spanish")
-* Cocoa stub application based on [Terminal
-* Notifier](https://github.com/alloy/terminal-notifier) to give a custom icon
+* Cocoa stub application based on [Terminal Notifier](https://github.com/alloy/terminal-notifier) to give a custom icon
  and grouping
 
 ## License
