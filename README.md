@@ -16,6 +16,9 @@ one of the little pearls of wisdom I've added to it.
 launchctl load ~/Library/LaunchAgents/uk.co.leftbrained.reminders.plist
 }}}
 
+
+![Screenshot of "Reminders"](support/screenshot.png)
+
 ## Todo
 
 * Fix escaping so I can use punctation in my tips
