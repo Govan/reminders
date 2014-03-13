@@ -1,0 +1,2 @@
+Ctrl-u: Delete from BOL to cursor
+Zsh shortcut

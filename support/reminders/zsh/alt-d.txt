@@ -1,0 +1,2 @@
+Alt-d: Delete forward word
+Zsh shortcut

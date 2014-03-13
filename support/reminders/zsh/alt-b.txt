@@ -1,0 +1,2 @@
+Alt-b: Move backward a word
+Zsh shortcut

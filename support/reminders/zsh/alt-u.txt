@@ -1,0 +1,2 @@
+Alt-u: Uppercase current word
+Zsh shortcut

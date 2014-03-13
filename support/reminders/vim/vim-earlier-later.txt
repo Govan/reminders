@@ -1,0 +1,3 @@
+Vim: undo with :earlier/:later
+Undo/redo based on a time (m/s/d/y)
+:earlier 30s 

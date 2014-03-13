@@ -1,0 +1,2 @@
+Ctrl-f: Move forward a char
+Zsh shortcut

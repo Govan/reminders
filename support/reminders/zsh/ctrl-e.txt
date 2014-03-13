@@ -1,0 +1,2 @@
+Ctrl-e: Jump to EOL
+Zsh shortcut

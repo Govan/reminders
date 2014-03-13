@@ -1,0 +1,2 @@
+Alt-t: Transpose words 
+Zsh shortcut

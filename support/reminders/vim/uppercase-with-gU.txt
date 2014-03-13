@@ -1,0 +1,3 @@
+Vim: gU<motion> - Uppercase text
+
+E.g. gU3w, gU$, gUt>

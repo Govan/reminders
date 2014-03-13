@@ -1,0 +1,2 @@
+Alt-f: Move forward a word
+Zsh shortcut

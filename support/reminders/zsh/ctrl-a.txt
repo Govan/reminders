@@ -1,0 +1,2 @@
+Ctrl-a: Jump to BOL
+Zsh shortcut

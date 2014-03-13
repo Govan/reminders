@@ -1,0 +1,2 @@
+Ctrl-b: Move backward a char
+Zsh shortcut

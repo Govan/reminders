@@ -1,0 +1,2 @@
+Ctrl-w: Delete word left from cursor
+Zsh shortcut

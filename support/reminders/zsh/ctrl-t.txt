@@ -1,0 +1,2 @@
+Ctrl-t: Transpose chars
+Zsh shortcut

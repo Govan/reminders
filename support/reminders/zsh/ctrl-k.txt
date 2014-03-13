@@ -1,0 +1,2 @@
+Ctrl-k: Delete from cursor to EOL
+Zsh shortcut

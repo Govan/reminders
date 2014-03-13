@@ -1,0 +1,2 @@
+Alt-l: Lowercase current word
+Zsh shortcut
