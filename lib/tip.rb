@@ -7,13 +7,16 @@ module Reminder
       self.content = args[:content].to_s
     end
 
-    def display
-      case Reminder::Config.notify_with.downcase
-      when "growl"
-        display_with_growl
-      when "notification center"
-        display_with_notification_center
-      end
+    def title?    
+      !title.empty?
+    end
+
+    def subtitle?
+      !subtitle.empty?
+    end
+
+    def content?
+      !content.empty?
     end
 
     def self.from_file(f)
@@ -30,16 +33,5 @@ module Reminder
     end
 
     private
-    def display_with_notification_center
-      with_title = !title.empty? ? "\"#{title}\"" : "\"Tip\""
-      with_subtitle = !subtitle.empty? ? "subtitle \"#{subtitle}\"" : ""
-      applescript = "display notification \"#{content}\" with title #{with_title} #{with_subtitle}"
-      cmd = "osascript -e '#{applescript}'"
-      system cmd
-    end
-
-    def display_with_growl
-      puts "Grrrr!"
-    end
   end
 end

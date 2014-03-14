@@ -2,11 +2,11 @@
 
 require_relative "./lib/reminder"
 
-exit if SystemState.idle_time > 600
-
+exit if SystemState.idle_time > 600 
 
 config_location = "~/.reminder/config.json"
 
+# Wrap this in a no-config exception that gets thrown if config can't be loaded
 Reminder::Config.load_or_prompt_to_install(config_location) do
   puts "No config found at '#{config_location}'. Shall I install one? (y/N)"
   gets.chomp.downcase == "y"
@@ -14,4 +14,4 @@ end
 
 tip_file = ARGV[0].to_s
 tip = tip_file.empty? ? Reminder::Tip.random : Reminder::Tip.from_file(tip_file) 
-tip.display
+Reminder::Display.display(tip)
