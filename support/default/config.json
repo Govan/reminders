@@ -1,4 +1,5 @@
 { 
   "tip_directory": "~/.reminder/tips",
-  "frequency": 600
+  "frequency": 600,
+  "notify_with": "notification center"
 }

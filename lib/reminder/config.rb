@@ -14,6 +14,7 @@ module Reminder
         self.load(path)
       elsif yield
         install(path)
+        self.load_or_prompt_to_install(path, &block)
       else
         "blow up"
       end
@@ -22,7 +23,7 @@ module Reminder
     def self.install(path)
       config_dir = File.expand_path(File.dirname(path))
       FileUtils.mkdir_p(config_dir)
-      default = File.join(File.dirname(__FILE__), "../support/default/*")
+      default = File.expand_path File.join(File.dirname(__FILE__), "../../support/default/*")
       Dir[default].each do |f|
         FileUtils.cp_r f, config_dir
       end
