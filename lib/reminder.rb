@@ -7,9 +7,9 @@ class Reminder
   end
 
   def display
-    with_title = !title.empty? ? "\"#{title}\"" : "\"Tip\""
-    with_subtitle = !subtitle.empty? ? "subtitle \"#{subtitle}\"" : ""
-    applescript = "display notification \"#{content}\" with title #{with_title} #{with_subtitle}"
+    with_title = !title.empty? ? "\"#{escape(title)}\"" : "\"Tip\""
+    with_subtitle = !subtitle.empty? ? "subtitle \"#{escape(subtitle)}\"" : ""
+    applescript = "display notification \"#{escape(content)}\" with title #{with_title} #{with_subtitle}"
     cmd = "osascript -e '#{applescript}'"
     system cmd
   end
@@ -19,5 +19,11 @@ class Reminder
     self.new :title=>title, 
               :subtitle=>subtitle,
               :content=>content
+  end
+
+private
+
+  def escape(str)
+    str.gsub("'", "\\'")
   end
 end
