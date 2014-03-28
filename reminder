@@ -12,4 +12,8 @@ unless tip
   tip = all_tips.shuffle.first
 end
 
-Reminder.from_file(tip).display
+if tip
+  Reminder.from_file(tip).display
+end
+
+
