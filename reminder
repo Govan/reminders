@@ -5,9 +5,25 @@ require_relative "./lib/system_state"
 
 exit if SystemState.idle_time > 600
 
+def system_reminder_directory
+  File.join(File.expand_path('~'), '.reminders')
+end
+
+def local_reminder_directory
+  File.join(File.dirname(__FILE__), 'reminders')
+end
+
+def tip_directory
+  if File.directory?(system_reminder_directory)
+    system_reminder_directory
+  else
+    local_reminder_directory
+  end
+end
+
 tip = ARGV[0]
 unless tip
-  tip_root = File.join File.dirname(__FILE__), "./reminders/**/*.txt"
+  tip_root = File.join tip_directory, "**/*.txt"
   all_tips = Dir[tip_root]
   tip = all_tips.shuffle.first
 end
